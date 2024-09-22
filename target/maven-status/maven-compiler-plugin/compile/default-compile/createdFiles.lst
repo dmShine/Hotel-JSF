@@ -1,0 +1,13 @@
+com\grupo8\hotel\service\QuartoService.class
+com\grupo8\hotel\bean\ReservaBean.class
+com\grupo8\hotel\service\HospedeService.class
+com\grupo8\hotel\model\TipoQuarto.class
+com\grupo8\hotel\resources\JakartaEE10Resource.class
+com\grupo8\hotel\model\Reserva.class
+com\grupo8\hotel\JakartaRestConfiguration.class
+com\grupo8\hotel\model\Quarto.class
+com\grupo8\hotel\service\ReservaService.class
+com\grupo8\hotel\model\Hospede.class
+com\grupo8\hotel\dao\HospedeDAO.class
+com\grupo8\hotel\dao\QuartoDAO.class
+com\grupo8\hotel\dao\ReservaDAO.class

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Faça Sua Reserva</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputLabel value="Hóspede: " />
+            <h:selectOneMenu value="#{reservaBean.reserva.hospede}">
+                <f:selectItem itemValue="" itemLabel="Hóspede" />
+                <f:selectItems value="#{reservaBean.hospedes}" var="r" itemValue="#{r.id}" itemLabel="#{r.nome}" />
+            </h:selectOneMenu>
+            
+            <h:outputLabel value="Quarto: " />
+            <h:selectOneMenu value="#{reservaBean.reserva.quarto}">
+                <f:selectItem itemValue="" itemLabel="Quarto" />
+                <f:selectItems value="#{reservaBean.quartos}" var="q" itemValue="#{q.id}" itemLabel="#{q.numero}" />
+            </h:selectOneMenu>
+            
+            <h:commandButton value="Reservar" />
+        </h:form>
+    </h:body>
+</html>
