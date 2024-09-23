@@ -23,7 +23,7 @@ import java.util.List;
  * @author felip
  */
 @Named
-@ViewScoped
+@SessionScoped
 public class ReservaBean implements Serializable {
     private Reserva reserva;
     private List<Hospede> hospedes;
@@ -42,7 +42,9 @@ public class ReservaBean implements Serializable {
     public void init() {
         reserva = new Reserva();
         hospedes = hospedeService.findAll();
+        System.out.println("Hospedes carregados: " + hospedes.size());
         quartos = quartoService.findAll();
+        System.out.println("Quartos carregados: " + quartos.size());
     }
 
     public void saveReserva() throws Exception {

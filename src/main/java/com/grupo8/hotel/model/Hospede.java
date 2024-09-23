@@ -66,15 +66,12 @@ public class Hospede implements Serializable {
             return false;
         }
         Hospede other = (Hospede) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject1.model.Hospede[ id=" + id + " ]";
+        return "com.grupo8.hotel.model.Hospede[ id=" + id + " ]";
     }
     
 }

@@ -59,15 +59,12 @@ public class TipoQuarto implements Serializable {
             return false;
         }
         TipoQuarto other = (TipoQuarto) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject1.model.TipoQuarto[ id=" + id + " ]";
+        return "com.grupo8.hotel.model.TipoQuarto[ id=" + id + " ]";
     }
     
 }

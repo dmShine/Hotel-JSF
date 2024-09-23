@@ -11,16 +11,16 @@
             <h:outputLabel value="Hóspede: " />
             <h:selectOneMenu value="#{reservaBean.reserva.hospede}">
                 <f:selectItem itemValue="" itemLabel="Hóspede" />
-                <f:selectItems value="#{reservaBean.hospedes}" var="r" itemValue="#{r.id}" itemLabel="#{r.nome}" />
+                <f:selectItems value="#{reservaBean.hospedes}" var="r" itemValue="#{r}" itemLabel="#{r.nome}" />
             </h:selectOneMenu>
             
             <h:outputLabel value="Quarto: " />
             <h:selectOneMenu value="#{reservaBean.reserva.quarto}">
                 <f:selectItem itemValue="" itemLabel="Quarto" />
-                <f:selectItems value="#{reservaBean.quartos}" var="q" itemValue="#{q.id}" itemLabel="#{q.numero}" />
+                <f:selectItems value="#{reservaBean.quartos}" var="q" itemValue="#{q}" itemLabel="#{q.numero}" />
             </h:selectOneMenu>
             
-            <h:commandButton value="Reservar" />
+            <h:commandButton value="Reservar" action="#{reservaBean.saveReserva}"/>
         </h:form>
     </h:body>
 </html>

@@ -90,15 +90,12 @@ public class Reserva implements Serializable {
             return false;
         }
         Reserva other = (Reserva) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject1.model.Reserva[ id=" + id + " ]";
+        return "com.grupo8.hotel.model.Reserva[ id=" + id + " ]";
     }
     
 }

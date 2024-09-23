@@ -5,7 +5,7 @@
 
     <persistence-unit name="hotelPU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>java:comp/DefaultDataSource</jta-data-source>
+        <jta-data-source>jdbc/hotelDataSource</jta-data-source>
         <class>com.grupo8.hotel.model.Quarto</class>
         <class>com.grupo8.hotel.model.Hospede</class>
         <class>com.grupo8.hotel.model.Reserva</class>
@@ -14,8 +14,9 @@
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hotel_db;create=true"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value="admin"/>
+            <!--<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>-->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
             <property name="eclipselink.logging.level" value="FINE"/>
         </properties>
     </persistence-unit>
